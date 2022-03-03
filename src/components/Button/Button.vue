@@ -43,6 +43,7 @@ button {
   justify-content: center;
   justify-items: center;
   user-select: none;
+  margin: 0.5rem;
 }
 
 button:enabled:active {
