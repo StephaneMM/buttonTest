@@ -1,30 +1,23 @@
 <template>
   <div>
     <button @click="someoneClicked">
+      <slot name="right" />
       <p>{{ message }}</p>
-      <Icon v-if="isClicked" />
+      <slot name="left" />
     </button>
   </div>
 </template>
 
 <script>
-import Icon from "../Icon/Icon.vue";
-
 export default {
   name: "Button",
-  data: () => ({
-    isClicked: false,
-  }),
-  components: {
-    Icon,
-  },
+
   props: {
     message: {
       default: "",
       type: String,
     },
   },
-
   methods: {
     someoneClicked() {
       this.$data.isClicked = !this.$data.isClicked;
