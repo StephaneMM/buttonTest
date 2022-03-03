@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Button message="Hej" />
+    <Button @someoneClicked="someoneClicked" message="Hej" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: "App",
   components: {
     Button,
+  },
+  methods: {
+    someoneClicked() {
+      console.log("someoneClicked");
+    },
   },
 };
 </script>

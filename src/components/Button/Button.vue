@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>{{ message }}</button>
+    <button @click="someoneClicked">{{ message }}</button>
   </div>
 </template>
 
@@ -11,6 +11,12 @@ export default {
     message: {
       default: "",
       type: String,
+    },
+  },
+
+  methods: {
+    someoneClicked() {
+      this.$emit("someoneClicked");
     },
   },
 };
