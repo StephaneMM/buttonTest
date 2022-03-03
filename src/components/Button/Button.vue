@@ -1,12 +1,23 @@
 <template>
   <div>
-    <button @click="someoneClicked">{{ message }}</button>
+    <button @click="someoneClicked">
+      <p>{{ message }}</p>
+      <Icon v-if="isClicked" />
+    </button>
   </div>
 </template>
 
 <script>
+import Icon from "../Icon/Icon.vue";
+
 export default {
   name: "Button",
+  data: () => ({
+    isClicked: false,
+  }),
+  components: {
+    Icon,
+  },
   props: {
     message: {
       default: "",
@@ -16,6 +27,7 @@ export default {
 
   methods: {
     someoneClicked() {
+      this.$data.isClicked = !this.$data.isClicked;
       this.$emit("someoneClicked");
     },
   },
