@@ -1,6 +1,6 @@
 <template>
   <div class="img-container">
-    <img :src="icon" alt="search icon" width="50" height="60" />
+    <img :src="icon" alt="search icon" width="30" height="30" />
   </div>
 </template>
 

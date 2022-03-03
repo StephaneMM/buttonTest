@@ -2,7 +2,7 @@
   <div id="app">
     <Button @someoneClicked="someoneClicked" message="Hej">
       <Icon v-if="isClicked" slot="left" />
-      <Icon v-if="isClicked" slot="right" />
+      <LoadingAnimation v-if="isClicked" slot="right" />
     </Button>
   </div>
 </template>
@@ -10,6 +10,7 @@
 <script>
 import Button from "./components/Button/Button.vue";
 import Icon from "./components/Icon/Icon.vue";
+import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation.vue";
 
 export default {
   name: "App",
@@ -21,6 +22,7 @@ export default {
   components: {
     Button,
     Icon,
+    LoadingAnimation,
   },
 
   methods: {
