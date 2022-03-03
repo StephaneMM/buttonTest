@@ -27,7 +27,7 @@ export default {
 
   methods: {
     someoneClicked() {
-      this.$data.isClicked = !this.$data.isClicked;
+      this.isClicked = !this.isClicked;
       this.$emit("someoneClicked");
     },
   },
